@@ -4,21 +4,23 @@ html {
 }
 
 :root {
-  --background-color: #ffb1b1;
-  --output-color: #1679ab;
-  --output-txt-color: #ffcbcb;
-  --output-txt-pr-color: #ffe5e5;
-  --btn-color: #fefaf6;
-  --label-color: #1679ab;
-}
-
-[data-theme="dark"] {
   --background-color: #102c57;
   --output-color: #fefaf6;
   --output-txt-color: #1679ab;
   --output-txt-pr-color: #1989c2;
   --btn-color: #1679ab;
+  --btn-hover-color: #ffe5e5;
   --label-color: #ffcbcb;
+}
+
+[data-theme="dark"] {
+  --background-color: #ffb1b1;
+  --output-color: #1679ab;
+  --output-txt-color: #ffcbcb;
+  --output-txt-pr-color: #ffe5e5;
+  --btn-color: #fefaf6;
+  --btn-hover-color: #ffe5e5;
+  --label-color: #1679ab;
 }
 
 .App {
@@ -45,7 +47,7 @@ html {
 
 .calculator-grid > button:hover,
 .calculator-grid > button:focus {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--btn-hover-color);
 }
 
 .span-two {

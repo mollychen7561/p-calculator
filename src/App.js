@@ -13,9 +13,10 @@ export const ACTIONS = {
   EVALUATE: "evaluate"
 };
 
-//
+// 狀態case
 function reducer(state, { type, payload }) {
   switch (type) {
+    // 輸入數字
     case ACTIONS.ADD_DIGIT:
       if (state.overwrite) {
         return {
@@ -34,6 +35,7 @@ function reducer(state, { type, payload }) {
         currentOperand: `${state.currentOperand || ""}${payload.digit}`
       };
 
+    // 記錄運算
     case ACTIONS.CHOOSE_OPERATION:
       if (state.currentOperand == null && state.previousOperand == null) {
         return state;
@@ -61,9 +63,11 @@ function reducer(state, { type, payload }) {
         currentOperand: null
       };
 
+    // 清除(AC)
     case ACTIONS.CLEAR:
       return {};
 
+    // 刪除
     case ACTIONS.DELETE_DIGIT:
       if (state.overwrite) {
         return {
@@ -82,6 +86,7 @@ function reducer(state, { type, payload }) {
         currentOperand: state.currentOperand.slice(0, -1)
       };
 
+    // 計算
     case ACTIONS.EVALUATE:
       if (
         state.operation == null ||
@@ -101,6 +106,7 @@ function reducer(state, { type, payload }) {
   }
 }
 
+// 計算
 function evaluate({ currentOperand, previousOperand, operation }) {
   const prev = parseFloat(previousOperand);
   const current = parseFloat(currentOperand);
@@ -123,10 +129,13 @@ function evaluate({ currentOperand, previousOperand, operation }) {
   return computation.toString();
 }
 
+// 整數格式
 const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
   maximumFractionDigits: 0
 });
 
+// 小數部分為null則用INTEGER_FORMATTER格式化整數
+// 非null則用.分割整數和小數
 function formatOperand(operand) {
   if (operand == null) return;
   const [integer, decimal] = operand.split(".");
@@ -140,6 +149,7 @@ function App() {
     {}
   );
 
+  // 明暗主題
   const [isDark, setIsDark] = useState(true);
 
   return (

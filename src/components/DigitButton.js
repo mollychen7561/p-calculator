@@ -1,5 +1,6 @@
 import { ACTIONS } from "../App";
 
+// 數字按鈕
 export default function DigitButton({ dispatch, digit }) {
   return (
     <button
