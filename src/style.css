@@ -85,7 +85,6 @@ html {
   font-size: 2.5rem;
 }
 
-/* 在小螢幕上 */
 @media (max-width: 400px) {
   .calculator-grid {
     grid-template-columns: repeat(4, 4rem);
