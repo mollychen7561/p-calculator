@@ -14,6 +14,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--label-color);
+  position: relative;
 }
 
 .toggle + label::before {
@@ -38,5 +39,53 @@
 }
 
 .toggle:checked + label::after {
-  transform: translateX(100%);
+  transform: translateX(2rem);
+}
+
+@media (max-width: 768px) {
+  .toggle-container {
+    right: 5%;
+  }
+
+  .toggle + label {
+    font-size: 1.25rem;
+  }
+
+  .toggle + label::before {
+    height: 1.5rem;
+    width: 3rem;
+  }
+
+  .toggle + label::after {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+
+  .toggle:checked + label::after {
+    transform: translateX(1.5rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .toggle-container {
+    right: 2.5%;
+  }
+
+  .toggle + label {
+    font-size: 1rem;
+  }
+
+  .toggle + label::before {
+    height: 1.2rem;
+    width: 2.4rem;
+  }
+
+  .toggle + label::after {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .toggle:checked + label::after {
+    transform: translateX(1.2rem);
+  }
 }

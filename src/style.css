@@ -30,6 +30,11 @@ html {
 .App {
   height: 100vh;
   background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .calculator-grid {
@@ -37,6 +42,7 @@ html {
   justify-content: center;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  gap: 0.1rem;
 }
 
 .calculator-grid > button {
@@ -61,7 +67,7 @@ html {
 .output {
   height: 5rem;
   margin-top: 4rem;
-  grid-column: 1 /-1;
+  grid-column: 1 / -1;
   border-radius: 10px;
   border: 2px solid #222;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9);
@@ -81,13 +87,44 @@ html {
 }
 
 .output .current-operand {
-  color: var(--output-txt-colfor);
+  color: var(--output-txt-color);
   font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(5rem, auto) repeat(5, 5rem);
+  }
+
+  .calculator-grid > button {
+    font-size: 1.5rem;
+  }
+
+  .output .previous-operand {
+    font-size: 1.25rem;
+  }
+
+  .output .current-operand {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 400px) {
   .calculator-grid {
     grid-template-columns: repeat(4, 4rem);
-    grid-template-rows: minmax(1rem, auto) repeat(5, 4rem);
+    grid-template-rows: minmax(4rem, auto) repeat(5, 4rem);
+  }
+
+  .calculator-grid > button {
+    font-size: 1.25rem;
+  }
+
+  .output .previous-operand {
+    font-size: 1rem;
+  }
+
+  .output .current-operand {
+    font-size: 1.75rem;
   }
 }
