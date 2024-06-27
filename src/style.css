@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 body,
 html {
   margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
@@ -55,7 +59,8 @@ html {
 }
 
 .output {
-  margin-top: 2em;
+  height: 5rem;
+  margin-top: 4rem;
   grid-column: 1 /-1;
   border-radius: 10px;
   border: 2px solid #222;
@@ -76,6 +81,14 @@ html {
 }
 
 .output .current-operand {
-  color: var(--output-txt-color);
+  color: var(--output-txt-colfor);
   font-size: 2.5rem;
+}
+
+/* 在小螢幕上 */
+@media (max-width: 400px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 4rem);
+    grid-template-rows: minmax(1rem, auto) repeat(5, 4rem);
+  }
 }
