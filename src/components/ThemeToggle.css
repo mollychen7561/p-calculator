@@ -45,9 +45,9 @@
 }
 
 @media (max-width: 768px) {
-  .toggle-container {
+  /* .toggle-container {
     right: 50%;
-  }
+  } */
 
   .toggle + label {
     font-size: 1.25rem;
