@@ -8,23 +8,23 @@ html {
 }
 
 :root {
-  --background-color: #ffb1b1;
-  --output-color: #1679ab;
-  --output-txt-color: #ffcbcb;
-  --output-txt-pr-color: #ffe5e5;
+  --background-color: #f3bf6c;
+  --output-color: #5ca29d;
+  --output-txt-color: #fefaf0;
+  --output-txt-pr-color: #fefaf6;
   --btn-color: #fefaf6;
-  --btn-hover-color: #ffe5e5;
-  --label-color: #1679ab;
+  --btn-hover-color: #5ca29d;
+  --label-color: #53546c;
 }
 
 [data-theme="dark"] {
-  --background-color: #102c57;
+  --background-color: #53546c;
   --output-color: #fefaf6;
-  --output-txt-color: #1679ab;
-  --output-txt-pr-color: #1989c2;
-  --btn-color: #1679ab;
-  --btn-hover-color: #ffe5e5;
-  --label-color: #ffcbcb;
+  --output-txt-color: #5ca29d;
+  --output-txt-pr-color: #5ca29d;
+  --btn-color: #5ca29d;
+  --btn-hover-color: #fefaf6;
+  --label-color: #f3bf6c;
 }
 
 /* remove iOS button style */
@@ -58,9 +58,9 @@ button {
 }
 
 .calculator-grid > button {
-  border-radius: 8px;
+  border-radius: 1rem;
   border: 2px solid #222;
-  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9);
+  /* box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9); */
   cursor: pointer;
   font-size: 2rem;
   outline: none;
@@ -85,9 +85,9 @@ button {
   height: 5rem;
   margin-top: 0.75rem;
   grid-column: 1 / -1;
-  border-radius: 10px;
+  border-radius: 1rem;
   border: 2px solid #222;
-  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9);
+  /* box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9); */
   background-color: var(--output-color);
   display: flex;
   flex-direction: column;

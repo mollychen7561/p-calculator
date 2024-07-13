@@ -23,8 +23,9 @@
   height: 2rem;
   width: 4rem;
   border-radius: 1rem;
-  background-color: var(--output-txt-color);
+  background-color: var(--output-color);
   margin-right: 0.5rem;
+  border: 2px solid #222;
   transition: background-color 250ms ease-in-out;
 }
 
@@ -87,6 +88,6 @@
   }
 
   .toggle:checked + label::after {
-    transform: translateX(1.2rem);
+    transform: translateX(1.4rem);
   }
 }
