@@ -1,7 +1,8 @@
 .toggle-container {
-  position: absolute;
+  /* position: absolute; */
   top: 0.5rem;
-  right: 10%;
+  right: 50%;
+  z-index: 10;
 }
 
 .toggle {
@@ -44,7 +45,7 @@
 
 @media (max-width: 768px) {
   .toggle-container {
-    right: 5%;
+    right: 50%;
   }
 
   .toggle + label {
@@ -68,21 +69,21 @@
 
 @media (max-width: 400px) {
   .toggle-container {
-    right: 2.5%;
+    right: 50%;
   }
 
   .toggle + label {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .toggle + label::before {
-    height: 1.2rem;
-    width: 2.4rem;
+    height: 2rem;
+    width: 3.5rem;
   }
 
   .toggle + label::after {
-    height: 1rem;
-    width: 1rem;
+    height: 1.8rem;
+    width: 1.8rem;
   }
 
   .toggle:checked + label::after {

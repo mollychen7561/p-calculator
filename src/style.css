@@ -8,16 +8,6 @@ html {
 }
 
 :root {
-  --background-color: #102c57;
-  --output-color: #fefaf6;
-  --output-txt-color: #1679ab;
-  --output-txt-pr-color: #1989c2;
-  --btn-color: #1679ab;
-  --btn-hover-color: #ffe5e5;
-  --label-color: #ffcbcb;
-}
-
-[data-theme="dark"] {
   --background-color: #ffb1b1;
   --output-color: #1679ab;
   --output-txt-color: #ffcbcb;
@@ -27,14 +17,34 @@ html {
   --label-color: #1679ab;
 }
 
+[data-theme="dark"] {
+  --background-color: #102c57;
+  --output-color: #fefaf6;
+  --output-txt-color: #1679ab;
+  --output-txt-pr-color: #1989c2;
+  --btn-color: #1679ab;
+  --btn-hover-color: #ffe5e5;
+  --label-color: #ffcbcb;
+}
+
+/* remove iOS button style */
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .App {
   height: 100vh;
   background-color: var(--background-color);
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding-top: 0.1rem;
+  margin-bottom: 1rem;
   box-sizing: border-box;
+  position: relative;
 }
 
 .calculator-grid {
@@ -43,6 +53,8 @@ html {
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
   gap: 0.1rem;
+  margin-bottom: 5rem;
+  position: relative;
 }
 
 .calculator-grid > button {
@@ -53,6 +65,11 @@ html {
   font-size: 2rem;
   outline: none;
   background-color: var(--btn-color);
+  color: inherit; /* remain color of parent element */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .calculator-grid > button:hover,
@@ -66,7 +83,7 @@ html {
 
 .output {
   height: 5rem;
-  margin-top: 4rem;
+  margin-top: 0.75rem;
   grid-column: 1 / -1;
   border-radius: 10px;
   border: 2px solid #222;
@@ -95,6 +112,7 @@ html {
   .calculator-grid {
     grid-template-columns: repeat(4, 5rem);
     grid-template-rows: minmax(5rem, auto) repeat(5, 5rem);
+    margin-bottom: 5rem;
   }
 
   .calculator-grid > button {
@@ -114,6 +132,7 @@ html {
   .calculator-grid {
     grid-template-columns: repeat(4, 4rem);
     grid-template-rows: minmax(4rem, auto) repeat(5, 4rem);
+    margin-bottom: 5rem;
   }
 
   .calculator-grid > button {

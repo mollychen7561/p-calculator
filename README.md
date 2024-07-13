@@ -15,4 +15,6 @@ Open http://localhost:3000 to view it in your browser.
 
 ## Function Demo
 
-https://mollychen7561.github.io/p-calculator/
+Website: https://mollychen7561.github.io/p-calculator/
+
+###

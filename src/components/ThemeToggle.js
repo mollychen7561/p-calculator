@@ -12,7 +12,7 @@ function ThemeToggle({ handleChange, isChecked }) {
         checked={isChecked}
       />
       <label htmlFor="check" className="label">
-        {isChecked ? "Dark Mode" : "Light Mode"}
+        {isChecked ? "Light Mode" : "Dark Mode"}
       </label>
     </div>
   );
