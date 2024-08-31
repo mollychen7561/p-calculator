@@ -1,8 +1,7 @@
 # React Calculator Side Project 
 ## Description
 This is a calculator side project, made using JavaScript (React) and css. Users can perform general calculator operations such as addition, subtraction, multiplication and division. In addition, there are also keyboard interaction and theme switching functions.
-<center><img src="https://github.com/mollychen7561/p-calculator/blob/main/public/calculator.png" width="60%"/></center>
-
+<center><img src="https://github.com/user-attachments/assets/9256c13e-e4dd-4397-959c-84ac91e55c6d" width="60%"/></center>
 
 ## Function Demo
 > github pages: https://mollychen7561.github.io/p-calculator/
